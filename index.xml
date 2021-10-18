@@ -18,5 +18,15 @@ docker run --name mysql-3306 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=P@ssW0rd -d mys
 cd /usr/localmkdir -p docker/mysql/confcd docker/mysql/conftouch my.cnf命令格式：mkdir [-p] DirName说明：建立一个子目录。参数：-p 确保目录名称存在，如果目录不存在的就新创建一个。docker run --name mysql-3306 -p 3306:3306 -v /usr/local/docker/mysql/conf:/etc/mysql/conf.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://luojiwen.github.io/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://luojiwen.github.io/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</guid>
+      <description>[TOC]
+一、 编程规约 (一) 命名风格 1. 【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束。反例：_name / __name / $name / name_ / name$ / name__2. 【强制】所有编程相关的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式。说明：正确的英文拼写和语法可以让阅读者易于理解，避免歧义。注意，纯拼音命名方式更要避免采用。正例：ali / alibaba / taobao / cainiao/ aliyun/ youku / hangzhou 等国际通用的名称，可视同英文。反例：DaZhePromotion [打折] / getPingfenByName() [评分] / int 某变量 = 33. 【强制】类名使用UpperCamelCase风格，但以下情形例外：DO / BO / DTO / VO / AO /PO / UID等。正例：ForceCode / UserDO / HtmlDTO / XmlService / TcpUdpDeal / TaPromotion反例：forcecode / UserDo / HTMLDto / XMLService / TCPUDPDeal / TAPromotion4.</description>
+    </item>
+    
   </channel>
 </rss>
