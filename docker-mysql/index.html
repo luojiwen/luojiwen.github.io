@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.88.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> &middot; 罗罗的博客</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://luojiwen.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://luojiwen.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://luojiwen.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://luojiwen.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://luojiwen.github.io/"><h1>罗罗的博客</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://luojiwen.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2021. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1></h1>
+  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
+  <h1 id="docker-安装-mysql-8-版本">docker 安装 mysql 8 版本</h1>
+<p>docker 中下载 mysql</p>
+<pre><code>sudo docker pull mysql
+</code></pre>
+<p>Starting a MySQL instance:</p>
+<pre><code>docker run --name mysql-3306 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=P@ssW0rd -d mysql:latest
+docker run --name mysql-3307 -p 3307:3307 -e MYSQL_ROOT_PASSWORD=P@ssW0rd -d mysql:latest
+docker run --name mysql-3308 -p 3308:3308 -e MYSQL_ROOT_PASSWORD=P@ssW0rd -d mysql:latest
+</code></pre>
+<p>创建将要映射到容器中的目录以及.cnf文件，然后再创建容器</p>
+<pre><code>cd /usr/local
+mkdir -p docker/mysql/conf
+cd docker/mysql/conf
+touch my.cnf
+
+命令格式：mkdir [-p] DirName
+说明：建立一个子目录。
+参数：-p 确保目录名称存在，如果目录不存在的就新创建一个。
+
+docker run --name mysql-3306 -p 3306:3306 -v /usr/local/docker/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=P@ssW0rd -d mysql:latest
+</code></pre>
+<p>注：</p>
+<pre><code>--name                Assign a name to the container
+--publish , -p        Publish a container’s port(s) to the host
+--publish-all , -P    Publish all exposed ports to random ports
+--env , -e            Set environment variables
+--detach , -d         Run container in background and print container ID
+--volume , -v         Bind mount a volume
+--expose              Expose a port or a range of ports
+</code></pre>
+<p>进入容器</p>
+<pre><code>docker exec -it mysql bash
+</code></pre>
+<p>登录mysql</p>
+<pre><code>mysql -u root -p
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'gh321';
+</code></pre>
+<p>添加远程登录用户</p>
+<pre><code>CREATE USER 'rock'@'%' IDENTIFIED WITH mysql_native_password BY 'gh321';
+GRANT ALL PRIVILEGES ON *.* TO 'rock'@'%';
+</code></pre>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
