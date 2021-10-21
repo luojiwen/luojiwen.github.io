@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://luojiwen.github.io/docker-mysql/</loc>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://luojiwen.github.io/md%E5%A5%BD%E7%9C%8B%E7%9A%84%E5%9B%BE%E7%89%87/</loc>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://luojiwen.github.io/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</loc>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://luojiwen.github.io/categories/</loc>
-  </url><url>
-    <loc>https://luojiwen.github.io/tags/</loc>
-  </url><url>
-    <loc>https://luojiwen.github.io/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>https://example.com/en/sitemap.xml</loc>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://example.com/zh-cn/sitemap.xml</loc>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://example.com/fr/sitemap.xml</loc>
+    
+  </sitemap>
+  
+</sitemapindex>
