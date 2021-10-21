@@ -1,5 +1,9 @@
 # 
 
+date: 2021-10-21T11:22:35+08:00
+lastmod: 2021-10-21T11:22:35+08:00
+draft: false
+
 # docker 安装 mysql 8 版本
   
 docker 中下载 mysql
